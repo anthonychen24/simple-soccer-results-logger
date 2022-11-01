@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Football Club League Results</h1>
+    <ul class="rappers">
+    <% for(let i=0; i < info.length; i++) {%>
+        <li class="rapper">
+            <span><%= info[i].stageName %></span>
+            <span><%= info[i].birthName %></span>
+            <span><%= info[i].points %></span>
+            <span class='fa fa-trash'></span>
+        </li>
+    <% } %>
+    </ul>
+
+    <h2>Add A Result:</h2>
+
+    <form action="/addRapper" method="POST">
+        <input type="text" placeholder="Home team - Away team" name="stageName">
+        <input type="text" placeholder="Scoreline" name="birthName">
+        <input type="text" placeholder="W,D,or L" name="points">
+        <input type="submit">
+    </form>
+
+    <script src='js/main.js'></script>
+</body>
+</html>
